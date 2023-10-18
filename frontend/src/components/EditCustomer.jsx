@@ -294,6 +294,7 @@ const EditCustomer = () => {
                       </option>
                     </Form.Control> */}
                     <Form.Control
+                      disabled={isDisabled}
                       type="text"
                       placeholder=""
                       name="city"
@@ -431,13 +432,15 @@ const EditCustomer = () => {
                       Edit
                     </Button>
                   )}
-                  <Button
-                    className="mb-2 mr-2 btn_f "
-                    variant="secondary"
-                    type="submit"
-                  >
-                    Update
-                  </Button>
+                  {!isDisabled && (
+                    <Button
+                      className="mb-2 mr-2 btn_f "
+                      variant="secondary"
+                      type="submit"
+                    >
+                      Update
+                    </Button>
+                  )}
                 </Form.Group>
                 <Form.Group as={Row} className="mb-2">
                   <Col sm={12}>
@@ -446,7 +449,7 @@ const EditCustomer = () => {
                       value={formData.status}
                       name="status"
                       onChange={handleChange}
-                      // required
+                      required
                     >
                       <option value="" disabled>
                         Select Status
