@@ -57,7 +57,6 @@ const UploadCSV = () => {
     } catch (error) {
       console.log("Error uploading customers from CSV:", error);
     }
-    // navigate("/customers/");
   };
 
   const allUsers =
