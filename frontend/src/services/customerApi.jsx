@@ -1,6 +1,7 @@
 import axios from "axios";
-// const backendUrl = "https://rise-business-backend-kcsmg.ondigitalocean.app";
+
 const backendUrl = "https://seal-app-u57xr.ondigitalocean.app";
+// const backendUrl = "http://localhost:3000";
 
 export const getCustomers = async (token) => {
   try {
