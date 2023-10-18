@@ -53,7 +53,7 @@ const UploadCSV = () => {
       customers.append("csvFile", selectedFile);
       customers.append("user", selectedAgent);
       await dispatch(uploadCustomers(customers));
-       navigate("/");
+      navigate("/customers");
     } catch (error) {
       console.log("Error uploading customers from CSV:", error);
     }
